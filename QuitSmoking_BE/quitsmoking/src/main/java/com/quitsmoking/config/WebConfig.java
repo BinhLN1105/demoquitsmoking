@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-    @Value("${FRONTEND_URL:https://your-frontend-service.onrender.com}")
+    @Value("${FRONTEND_URL:https://demoquitsmoking-frontend.onrender.com}")
     private String frontendUrl;
 
     @Override
@@ -18,6 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
                 "http://localhost:4173",
                 "http://localhost:3000",
                 "http://localhost:5173",
+                "https://demoquitsmoking-frontend.onrender.com",
                 frontendUrl
             )
             .allowedMethods("*");
