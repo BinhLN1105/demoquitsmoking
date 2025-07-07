@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-    @Value("${FRONTEND_URL:https://demoquitsmoking-frontend.onrender.com}")
+    @Value("${FRONTEND_URL}")
     private String frontendUrl;
 
     @Override
