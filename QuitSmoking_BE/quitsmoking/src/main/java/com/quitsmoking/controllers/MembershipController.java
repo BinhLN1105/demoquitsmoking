@@ -27,7 +27,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/membership")
-@CrossOrigin(origins = "*")
 public class MembershipController {
     private static final Logger logger = LoggerFactory.getLogger(MembershipController.class);
     @Autowired

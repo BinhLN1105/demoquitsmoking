@@ -18,7 +18,6 @@ import org.slf4j.LoggerFactory; // Import LoggerFactory
 
 @RestController
 @RequestMapping("/api/community")
-@CrossOrigin(origins = "http://localhost:3000")
 public class CommunityController {
 
     private static final Logger logger = LoggerFactory.getLogger(CommunityController.class); // Initialize logger

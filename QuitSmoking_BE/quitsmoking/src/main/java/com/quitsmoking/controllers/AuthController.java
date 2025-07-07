@@ -47,7 +47,6 @@ import java.util.stream.Collectors; // Thêm import này
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
 public class AuthController {
 
     private final AuthenticationManager authenticationManager;

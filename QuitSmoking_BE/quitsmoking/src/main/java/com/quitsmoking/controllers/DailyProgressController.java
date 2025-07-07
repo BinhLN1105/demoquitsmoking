@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Optional;
 @RestController
 @RequestMapping("/api/daily-progress")
-@CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
 public class DailyProgressController {
     @Autowired
     private DailyProgressService dailyProgressService;
