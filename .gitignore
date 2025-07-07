@@ -14,10 +14,7 @@
 # File cấu hình môi trường cho Frontend (RẤT QUAN TRỌNG: KHÔNG BAO GIỜ ĐẨY LÊN GIT)
 # File .env thường chứa các khóa API, thông tin nhạy cảm.
 /QuitSmoking_FE/.env
-<<<<<<< HEAD
 /QuitSmoking_BE/.env
-=======
->>>>>>> 99f2cfb (First commit)
 # Thư mục đầu ra của quá trình build Backend
 /QuitSmoking_BE/quitsmoking/target/
 # Thư mục dependencies của Node.js cho Frontend
@@ -37,7 +34,5 @@ yarn-debug.log*
 # Các file hệ điều hành
 Thumbs.db           
 .vscode/
-<<<<<<< HEAD
 .env
-=======
->>>>>>> 99f2cfb (First commit)
+QuitSmoking_BE/quitsmoking/src/main/resources/application.properties
