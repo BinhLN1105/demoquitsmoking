@@ -75,7 +75,7 @@ const Community = () => {
           headers['Authorization'] = `Bearer ${token}`;
         }
 
-        const response = await fetch('http://localhost:8080/api/community/posts', {
+        const response = await fetch('${import.meta.env.VITE_API_URL}/api/community/posts', {
           headers: headers,
         });
 
@@ -110,7 +110,7 @@ const Community = () => {
           pictureUrl: post.avatarUrl
               ? (post.avatarUrl.startsWith("http")
                   ? post.avatarUrl
-                  : `http://localhost:8080${post.avatarUrl}`)
+                  : `${import.meta.env.VITE_API_URL}${post.avatarUrl}`)
               : null,
           username: post.username,
           firstName: post.firstName,
@@ -180,7 +180,7 @@ const Community = () => {
         postType: selectedPostType,
         title: newTitle,
       };
-      const response = await fetch('http://localhost:8080/api/community/posts', {
+      const response = await fetch('${import.meta.env.VITE_API_URL}/api/community/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -203,7 +203,7 @@ const Community = () => {
           pictureUrl: user.pictureUrl
               ? (user.pictureUrl.startsWith("http")
                   ? user.pictureUrl
-                  : `http://localhost:8080${user.pictureUrl}`)
+                  : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`)
               : null,
           username: user.username,
           firstName: user.firstName,
@@ -451,7 +451,7 @@ const Community = () => {
                                             whileHover={{ scale: 1.05 }}
                                             src={post.pictureUrl.startsWith("http")
                                                 ? post.pictureUrl
-                                                : `http://localhost:8080${post.pictureUrl}`}
+                                                : `${import.meta.env.VITE_API_URL}${post.pictureUrl}`}
                                             alt={post.username}
                                             className="w-12 h-12 rounded-full object-cover border-2 border-green-200"
                                         />
