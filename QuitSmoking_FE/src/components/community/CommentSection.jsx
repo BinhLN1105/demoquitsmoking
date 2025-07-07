@@ -50,7 +50,7 @@ const CommentSection = ({ postId, showTitle = true }) => {
                 return;
             }
 
-            const response = await fetch('${import.meta.env.VITE_API_URL}/api/community/comments', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/comments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

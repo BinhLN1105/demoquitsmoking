@@ -16,7 +16,7 @@ class WebSocketService {
         // Disconnect existing connection if any
         this.disconnect();
         
-        const socket = new SockJS('${import.meta.env.VITE_API_URL}/ws');
+        const socket = new SockJS(`${import.meta.env.VITE_API_URL}/ws`);
         this.stompClient = new Client({
             webSocketFactory: () => socket,
             debug: () => {},

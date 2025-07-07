@@ -75,7 +75,7 @@ const Community = () => {
           headers['Authorization'] = `Bearer ${token}`;
         }
 
-        const response = await fetch('${import.meta.env.VITE_API_URL}/api/community/posts', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts`, {
           headers: headers,
         });
 
@@ -180,7 +180,7 @@ const Community = () => {
         postType: selectedPostType,
         title: newTitle,
       };
-      const response = await fetch('${import.meta.env.VITE_API_URL}/api/community/posts', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
