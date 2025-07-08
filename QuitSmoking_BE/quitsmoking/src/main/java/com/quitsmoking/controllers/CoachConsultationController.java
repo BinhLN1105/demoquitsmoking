@@ -13,9 +13,13 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/coach-consultations")
 <<<<<<< HEAD
+<<<<<<< HEAD
 @CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+@CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
+>>>>>>> 2ab7ab5 (Deploy)
 public class CoachConsultationController {
     @Autowired
     private CoachConsultationService consultationService;

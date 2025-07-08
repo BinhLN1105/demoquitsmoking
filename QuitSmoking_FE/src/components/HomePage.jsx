@@ -194,10 +194,14 @@ const HomePage = () => {
             <p className="hover:text-green-400 transition-colors duration-300">
               <a href="https://ptdat30.github.io/digital-cv-portfolio/" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
 <<<<<<< HEAD
+<<<<<<< HEAD
               © {new Date().getFullYear()} The QuitSmoking application was developed by F4_VanTai's team
 =======
               © {new Date().getFullYear()} QuitSmoking made by Group 3
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+              © {new Date().getFullYear()} The QuitSmoking application was developed by F4_VanTai's team
+>>>>>>> 2ab7ab5 (Deploy)
               </a>
             </p>
           </div>

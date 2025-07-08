@@ -7,6 +7,7 @@ const AuthContext = createContext();
 
 const authReducer = (state, action) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.log(
     "AuthContext (Reducer): Hành động được gửi đi:",
@@ -15,6 +16,8 @@ const authReducer = (state, action) => {
     action.payload
   );
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
   switch (action.type) {
     case "LOGIN_START":
       return {
@@ -46,6 +49,7 @@ const authReducer = (state, action) => {
         error: null,
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       console.log(
@@ -53,6 +57,9 @@ const authReducer = (state, action) => {
         newState
       );
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+
+>>>>>>> 2ab7ab5 (Deploy)
       return newState;
     case "LOGIN_FAILURE":
       const failureState = {
@@ -64,6 +71,7 @@ const authReducer = (state, action) => {
         error: action.payload,
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       console.log(
@@ -71,6 +79,9 @@ const authReducer = (state, action) => {
         failureState
       );
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+
+>>>>>>> 2ab7ab5 (Deploy)
       return failureState;
     case "LOGOUT":
       const logoutState = {
@@ -81,6 +92,7 @@ const authReducer = (state, action) => {
         error: null,
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       console.log(
@@ -88,6 +100,9 @@ const authReducer = (state, action) => {
         logoutState
       );
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+
+>>>>>>> 2ab7ab5 (Deploy)
       return logoutState;
     case "UPDATE_USER":
       const updatedUserState = {
@@ -95,6 +110,9 @@ const authReducer = (state, action) => {
         user: { ...state.user, ...action.payload }, // Cập nhật các trường user hiện có
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ab7ab5 (Deploy)
 
       return updatedUserState;
     case "SET_LOADING":
@@ -108,6 +126,7 @@ const authReducer = (state, action) => {
     case "CLEAR_ERROR":
       const clearedErrorState = { ...state, error: null };
 
+<<<<<<< HEAD
 =======
       console.log(
         "AuthContext (Reducer): UPDATE_USER - Trạng thái mới:",
@@ -135,6 +154,8 @@ const authReducer = (state, action) => {
         clearedErrorState
       );
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
       return clearedErrorState;
     default:
       return state;
@@ -157,6 +178,7 @@ export const AuthProvider = ({ children }) => {
     const user = authService.getCurrentUser();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(
       "AuthContext: Kiểm tra đồng bộ - State isAuthenticated:",
@@ -172,6 +194,8 @@ export const AuthProvider = ({ children }) => {
     );
 
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
     // Nếu state nghĩ đã login nhưng không có token/user → logout
     if (state.isAuthenticated && (!token || !user)) {
       console.warn("AuthContext: Phát hiện mất đồng bộ - logout tự động");
@@ -180,11 +204,14 @@ export const AuthProvider = ({ children }) => {
     // Nếu có token/user nhưng state chưa login → login
     else if (!state.isAuthenticated && token && user) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.log(
         "AuthContext: Phát hiện có token/user mà chưa login - đồng bộ state"
       );
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
       dispatch({
         type: "LOGIN_SUCCESS",
         payload: { ...user, token },
@@ -252,9 +279,12 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await authService.login(credentials);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.log("AuthContext: Login response:", response);
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
 
       if (response.success) {
         const userData = response.user;
@@ -279,11 +309,14 @@ export const AuthProvider = ({ children }) => {
             userData.id,
             'user-activity',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             (message) => {
               console.log('User activity message:', message);
             }
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
           );
         }
 

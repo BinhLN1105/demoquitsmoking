@@ -17,10 +17,14 @@ const PostDetail = () => {
         const fetchPost = async () => {
             try {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 const response = await fetch(`http://localhost:8080/api/community/posts/${postId}`);
 =======
                 const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts/${postId}`);
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+                const response = await fetch(`http://localhost:8080/api/community/posts/${postId}`);
+>>>>>>> 2ab7ab5 (Deploy)
                 if (!response.ok) {
                     throw new Error('Failed to fetch post');
                 }
@@ -63,10 +67,14 @@ const PostDetail = () => {
                             src={post.pictureUrl.startsWith("http")
                                 ? post.pictureUrl
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 : `http://localhost:8080${post.pictureUrl}`}
 =======
                                 : `${import.meta.env.VITE_API_URL}${post.pictureUrl}`}
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+                                : `http://localhost:8080${post.pictureUrl}`}
+>>>>>>> 2ab7ab5 (Deploy)
                             alt={post.username}
                             className="w-12 h-12 rounded-full object-cover border-2 border-green-200"
                         />

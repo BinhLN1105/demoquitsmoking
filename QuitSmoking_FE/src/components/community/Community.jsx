@@ -73,7 +73,11 @@ const Community = () => {
           headers['Authorization'] = `Bearer ${token}`;
         }
 
+<<<<<<< HEAD
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts`, {
+=======
+        const response = await fetch('http://localhost:8080/api/community/posts', {
+>>>>>>> 2ab7ab5 (Deploy)
           headers: headers,
         });
 
@@ -100,7 +104,11 @@ const Community = () => {
           pictureUrl: post.avatarUrl
               ? (post.avatarUrl.startsWith("http")
                   ? post.avatarUrl
+<<<<<<< HEAD
                   : `${import.meta.env.VITE_API_URL}${post.avatarUrl}`)
+=======
+                  : `http://localhost:8080${post.avatarUrl}`)
+>>>>>>> 2ab7ab5 (Deploy)
               : null,
           username: post.username,
           firstName: post.firstName,
@@ -167,7 +175,11 @@ const Community = () => {
         postType: selectedPostType,
         title: newTitle,
       };
+<<<<<<< HEAD
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts`, {
+=======
+      const response = await fetch('http://localhost:8080/api/community/posts', {
+>>>>>>> 2ab7ab5 (Deploy)
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -190,7 +202,11 @@ const Community = () => {
           pictureUrl: user.pictureUrl
               ? (user.pictureUrl.startsWith("http")
                   ? user.pictureUrl
+<<<<<<< HEAD
                   : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`)
+=======
+                  : `http://localhost:8080${user.pictureUrl}`)
+>>>>>>> 2ab7ab5 (Deploy)
               : null,
           username: user.username,
           firstName: user.firstName,
@@ -449,7 +465,11 @@ const Community = () => {
                                             whileHover={{ scale: 1.05 }}
                                             src={post.pictureUrl.startsWith("http")
                                                 ? post.pictureUrl
+<<<<<<< HEAD
                                                 : `${import.meta.env.VITE_API_URL}${post.pictureUrl}`}
+=======
+                                                : `http://localhost:8080${post.pictureUrl}`}
+>>>>>>> 2ab7ab5 (Deploy)
                                             alt={post.username}
                                             className="w-12 h-12 rounded-full object-cover border-2 border-green-200"
                                         />
@@ -480,6 +500,7 @@ const Community = () => {
                                       </div>
                                     </div>
                                     <div className="text-right mt-2 sm:mt-0">
+<<<<<<< HEAD
                                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                                           post.postType === 'ACHIEVEMENT_SHARE' ? 'bg-yellow-100 text-yellow-700' :
                                               post.postType === 'MOTIVATION' ? 'bg-blue-100 text-blue-700' :
@@ -489,6 +510,17 @@ const Community = () => {
                                       }`}>
                                         {postTypes.find(type => type === post.postType)}
                                       </span>
+=======
+              <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                  post.postType === 'ACHIEVEMENT_SHARE' ? 'bg-yellow-100 text-yellow-700' :
+                      post.postType === 'MOTIVATION' ? 'bg-blue-100 text-blue-700' :
+                          post.postType === 'QUESTION' ? 'bg-purple-100 text-purple-700' :
+                              post.postType === 'ADVICE' ? 'bg-green-100 text-green-700' :
+                                  'bg-gray-100 text-gray-700'
+              }`}>
+                {postTypes.find(type => type === post.postType)}
+              </span>
+>>>>>>> 2ab7ab5 (Deploy)
                                     </div>
                                   </div>
 

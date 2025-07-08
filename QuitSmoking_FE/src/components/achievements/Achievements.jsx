@@ -21,9 +21,13 @@ const Achievements = () => {
     totalAchievements: 0,
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [shareModal, setShareModal] = useState({ open: false, success: true, message: "" });
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+  const [shareModal, setShareModal] = useState({ open: false, success: true, message: "" });
+>>>>>>> 2ab7ab5 (Deploy)
 
   const achievementCategories = {
     ALL: "Tất cả",
@@ -209,10 +213,13 @@ const Achievements = () => {
     try {
       await apiService.shareAchievement(achievementId);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
       // Update local state
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
       setUserAchievements(prev => 
         prev.map(ua => 
           ua.achievementId === achievementId
@@ -220,6 +227,7 @@ const Achievements = () => {
             : ua
         )
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
       setShareModal({ open: true, success: true, message: "Đã chia sẻ thành tích với cộng đồng!" });
     } catch (err) {
@@ -231,6 +239,11 @@ const Achievements = () => {
     } catch (err) {
       alert("Không thể chia sẻ thành tích. Vui lòng thử lại sau.");
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+      setShareModal({ open: true, success: true, message: "Đã chia sẻ thành tích với cộng đồng!" });
+    } catch (err) {
+      setShareModal({ open: true, success: false, message: "Không thể chia sẻ thành tích. Vui lòng thử lại sau." });
+>>>>>>> 2ab7ab5 (Deploy)
     }
   };
 
@@ -607,6 +620,9 @@ const Achievements = () => {
         onClose={() => setNewAchievement(null)} 
       />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ab7ab5 (Deploy)
       {/* Share Achievement Modal */}
       {shareModal.open && (
         <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
@@ -631,8 +647,11 @@ const Achievements = () => {
           </div>
         </div>
       )}
+<<<<<<< HEAD
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
     </div>
   );
 };

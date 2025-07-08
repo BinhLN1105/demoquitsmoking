@@ -18,10 +18,14 @@ const Comment = ({ comment, onReply, onDelete, isOwner }) => {
                         src={comment.user.pictureUrl.startsWith("http")
                             ? comment.user.pictureUrl
 <<<<<<< HEAD
+<<<<<<< HEAD
                             : `http://localhost:8080${comment.user.pictureUrl}`}
 =======
                             : `${import.meta.env.VITE_API_URL}${comment.user.pictureUrl}`}
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+                            : `http://localhost:8080${comment.user.pictureUrl}`}
+>>>>>>> 2ab7ab5 (Deploy)
                         alt={comment.user.username}
                         className="w-8 h-8 rounded-full object-cover"
                     />

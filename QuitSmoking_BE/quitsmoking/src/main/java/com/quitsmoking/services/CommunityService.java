@@ -53,11 +53,17 @@ public class CommunityService {
             String lastName = (user != null) ? user.getLastName() : null;
             String avatarUrl = (user != null) ? user.getPictureUrl() : null;
 <<<<<<< HEAD
+<<<<<<< HEAD
             String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+            String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
+            String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
+            String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
+>>>>>>> 2ab7ab5 (Deploy)
 
             return new CommunityPostDto(
                     post,
@@ -66,13 +72,19 @@ public class CommunityService {
                     firstName,
                     lastName,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ab7ab5 (Deploy)
                     avatarUrl,
                     role,
                     membershipPlanId,
                     membershipPlanName
+<<<<<<< HEAD
 =======
                     avatarUrl
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
             );
         }).collect(Collectors.toList());
     }
@@ -89,11 +101,17 @@ public class CommunityService {
             String lastName = (user != null) ? user.getLastName() : null;
             String avatarUrl = (user != null) ? user.getPictureUrl() : null;
 <<<<<<< HEAD
+<<<<<<< HEAD
             String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+            String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
+            String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
+            String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
+>>>>>>> 2ab7ab5 (Deploy)
 
             return new CommunityPostDto(
                     post,
@@ -102,13 +120,19 @@ public class CommunityService {
                     firstName,
                     lastName,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ab7ab5 (Deploy)
                     avatarUrl,
                     role,
                     membershipPlanId,
                     membershipPlanName
+<<<<<<< HEAD
 =======
                     avatarUrl
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
             );
         });
     }
@@ -135,13 +159,19 @@ public class CommunityService {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ab7ab5 (Deploy)
     @Transactional
     public void deletePost(String postId) {
         // Xóa toàn bộ comment liên quan trước
         communityCommentRepository.deleteByPostId(postId);
+<<<<<<< HEAD
 =======
     public void deletePost(String postId) {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
         communityPostRepository.deleteById(postId);
     }
 

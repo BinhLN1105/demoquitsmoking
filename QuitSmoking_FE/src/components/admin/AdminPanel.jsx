@@ -32,11 +32,17 @@ const AdminPanel = () => {
   const [deleteConsultationId, setDeleteConsultationId] = useState(null);
   const [deleteSuccessMessage, setDeleteSuccessMessage] = useState("");
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [showRoleUpdateModal, setShowRoleUpdateModal] = useState(false);
   const [roleUpdateMessage, setRoleUpdateMessage] = useState("");
   const [roleUpdateSuccess, setRoleUpdateSuccess] = useState(true);
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+  const [showRoleUpdateModal, setShowRoleUpdateModal] = useState(false);
+  const [roleUpdateMessage, setRoleUpdateMessage] = useState("");
+  const [roleUpdateSuccess, setRoleUpdateSuccess] = useState(true);
+>>>>>>> 2ab7ab5 (Deploy)
 
   const tabs = [
     { id: "dashboard", name: "Tổng quan", icon: "📊" },
@@ -273,15 +279,21 @@ const AdminPanel = () => {
         { headers: { Authorization: `Bearer ${token}` } }
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
       if (response.status === 200) {
         setUsers(prevUsers => prevUsers.map(u =>
           u.id === userId ? { ...u, role: selectedRole } : u
         ));
         setEditRoleId(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ab7ab5 (Deploy)
         setRoleUpdateMessage('Cập nhật vai trò thành công!');
         setRoleUpdateSuccess(true);
         setShowRoleUpdateModal(true);
@@ -302,6 +314,7 @@ const AdminPanel = () => {
       setRoleUpdateMessage('Lỗi khi cập nhật role: ' + (err.response?.data?.message || err.message));
       setRoleUpdateSuccess(false);
       setShowRoleUpdateModal(true);
+<<<<<<< HEAD
 =======
         alert('Cập nhật vai trò thành công!');
       }
@@ -318,6 +331,8 @@ const AdminPanel = () => {
       
       alert('Lỗi khi cập nhật role: ' + (err.response?.data?.message || err.message));
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
     }
   };
 
@@ -1190,10 +1205,14 @@ const EncryptionTab = () => (
 
       {showDetailId && userDetail && (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
 =======
         <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50 px-2">
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+          <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
+>>>>>>> 2ab7ab5 (Deploy)
           <div className="bg-white rounded-lg shadow-lg p-2 sm:p-4 md:p-6 w-full max-w-lg md:max-w-2xl relative max-h-[90vh] overflow-y-auto">
             <button
               className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700 text-xl font-bold"
@@ -1566,6 +1585,9 @@ const EncryptionTab = () => (
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ab7ab5 (Deploy)
 
       {/* Modal thông báo cập nhật role */}
       {showRoleUpdateModal && (
@@ -1584,8 +1606,11 @@ const EncryptionTab = () => (
           </div>
         </div>
       )}
+<<<<<<< HEAD
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
+=======
+>>>>>>> 2ab7ab5 (Deploy)
     </div>
   );
 };
