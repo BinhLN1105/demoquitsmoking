@@ -13,7 +13,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/notifications")
+<<<<<<< HEAD
 @CrossOrigin(origins = "http://localhost:3000")
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 public class NotificationController {
     @Autowired
     private NotificationService notificationService;

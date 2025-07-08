@@ -26,7 +26,11 @@ const Feedback = () => {
     }
 
     try {
+<<<<<<< HEAD
       const response = await fetch('http://localhost:8080/api/feedback/my-feedback', {
+=======
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback/my-feedback`, {
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${jwtToken}`
@@ -110,7 +114,11 @@ const Feedback = () => {
     const jwtToken = localStorage.getItem('jwt_token');
 
     try {
+<<<<<<< HEAD
       const response = await fetch('http://localhost:8080/api/feedback', {
+=======
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback`, {
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

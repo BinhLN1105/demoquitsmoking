@@ -52,9 +52,12 @@ public class CommunityService {
             String firstName = (user != null) ? user.getFirstName() : null;
             String lastName = (user != null) ? user.getLastName() : null;
             String avatarUrl = (user != null) ? user.getPictureUrl() : null;
+<<<<<<< HEAD
             String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 
             return new CommunityPostDto(
                     post,
@@ -62,10 +65,14 @@ public class CommunityService {
                     username,
                     firstName,
                     lastName,
+<<<<<<< HEAD
                     avatarUrl,
                     role,
                     membershipPlanId,
                     membershipPlanName
+=======
+                    avatarUrl
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
             );
         }).collect(Collectors.toList());
     }
@@ -81,9 +88,12 @@ public class CommunityService {
             String firstName = (user != null) ? user.getFirstName() : null;
             String lastName = (user != null) ? user.getLastName() : null;
             String avatarUrl = (user != null) ? user.getPictureUrl() : null;
+<<<<<<< HEAD
             String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 
             return new CommunityPostDto(
                     post,
@@ -91,10 +101,14 @@ public class CommunityService {
                     username,
                     firstName,
                     lastName,
+<<<<<<< HEAD
                     avatarUrl,
                     role,
                     membershipPlanId,
                     membershipPlanName
+=======
+                    avatarUrl
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
             );
         });
     }
@@ -120,10 +134,14 @@ public class CommunityService {
         throw new RuntimeException("Post not found");
     }
 
+<<<<<<< HEAD
     @Transactional
     public void deletePost(String postId) {
         // Xóa toàn bộ comment liên quan trước
         communityCommentRepository.deleteByPostId(postId);
+=======
+    public void deletePost(String postId) {
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
         communityPostRepository.deleteById(postId);
     }
 

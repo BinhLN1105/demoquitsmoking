@@ -18,15 +18,22 @@ public class CommunityPostDto {
     private String firstName;
     private String lastName;
     private String avatarUrl; // Assuming User model has an avatar URL
+<<<<<<< HEAD
     private String role; // ADMIN, COACH, MEMBER, GUEST
     private String membershipPlanId; // FREE_TRIAL_PLAN, PLAN30DAYS, PLAN60DAYS, PLAN90DAYS
     private String membershipPlanName; // Tên gói thành viên
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 
     // Constructor (quan trọng để ánh xạ từ Entity sang DTO)
     public CommunityPostDto() {}
 
     // Constructor để dễ dàng tạo DTO từ CommunityPost và User
+<<<<<<< HEAD
     public CommunityPostDto(CommunityPost post, String userId, String username, String firstName, String lastName, String avatarUrl, String role, String membershipPlanId, String membershipPlanName) {
+=======
+    public CommunityPostDto(CommunityPost post, String userId, String username, String firstName, String lastName, String avatarUrl) {
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
         this.id = post.getId();
         this.title = post.getTitle();
         this.content = post.getContent();
@@ -38,9 +45,12 @@ public class CommunityPostDto {
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatarUrl = avatarUrl;
+<<<<<<< HEAD
         this.role = role;
         this.membershipPlanId = membershipPlanId;
         this.membershipPlanName = membershipPlanName;
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
     }
 
     // Getters and Setters cho tất cả các trường
@@ -67,10 +77,13 @@ public class CommunityPostDto {
     public void setLastName(String lastName) { this.lastName = lastName; }
     public String getAvatarUrl() { return avatarUrl; }
     public void setAvatarUrl(String avatarUrl) { this.avatarUrl = avatarUrl; }
+<<<<<<< HEAD
     public String getRole() { return role; }
     public void setRole(String role) { this.role = role; }
     public String getMembershipPlanId() { return membershipPlanId; }
     public void setMembershipPlanId(String membershipPlanId) { this.membershipPlanId = membershipPlanId; }
     public String getMembershipPlanName() { return membershipPlanName; }
     public void setMembershipPlanName(String membershipPlanName) { this.membershipPlanName = membershipPlanName; }
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 }

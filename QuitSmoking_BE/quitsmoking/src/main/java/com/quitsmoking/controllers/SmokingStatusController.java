@@ -12,7 +12,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/smoking-status") // Base URL cho API này
+<<<<<<< HEAD
 @CrossOrigin(origins = "*")
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 public class SmokingStatusController {
 
     private final SmokingStatusService smokingStatusService;

@@ -23,7 +23,11 @@ const CommentSection = ({ postId, showTitle = true }) => {
                 }
 
                 const response = await fetch(
+<<<<<<< HEAD
                     `http://localhost:8080/api/community/comments/post/${postId}`,
+=======
+                    `${import.meta.env.VITE_API_URL}/api/community/comments/post/${postId}`,
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
                     { headers }
                 );
 
@@ -50,7 +54,11 @@ const CommentSection = ({ postId, showTitle = true }) => {
                 return;
             }
 
+<<<<<<< HEAD
             const response = await fetch('http://localhost:8080/api/community/comments', {
+=======
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/comments`, {
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +98,11 @@ const CommentSection = ({ postId, showTitle = true }) => {
                             <img
                                 src={user.pictureUrl.startsWith("http")
                                     ? user.pictureUrl
+<<<<<<< HEAD
                                     : `http://localhost:8080${user.pictureUrl}`}
+=======
+                                    : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`}
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
                                 alt={user.username}
                                 className="w-10 h-10 rounded-full object-cover border border-green-200"
                             />

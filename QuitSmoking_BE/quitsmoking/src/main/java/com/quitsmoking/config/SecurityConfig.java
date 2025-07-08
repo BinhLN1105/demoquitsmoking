@@ -88,11 +88,18 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET, "/api/daily-progress/week").hasAnyRole("GUEST", "MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.GET, "/api/daily-progress/week/**").hasAnyRole("GUEST", "MEMBER", "ADMIN", "COACH")
                 // Cho phép truy cập endpoint community
+<<<<<<< HEAD
                 // Cho phép guest truy cập endpoint posts nhưng không được tạo bài viết và comment
                 .requestMatchers(HttpMethod.GET, "/api/community/posts/**").hasAnyRole("GUEST", "MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.GET, "/api/community/posts").hasAnyRole("GUEST", "MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.GET, "/api/community/comments").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.POST, "/api/community/posts").hasAnyRole("MEMBER", "ADMIN", "COACH")
+=======
+                .requestMatchers(HttpMethod.POST, "/api/community/posts").hasAnyRole("MEMBER", "ADMIN", "COACH")
+                .requestMatchers(HttpMethod.GET, "/api/community/posts/**").hasAnyRole("MEMBER", "ADMIN", "COACH")
+                .requestMatchers(HttpMethod.GET, "/api/community/posts").hasAnyRole("MEMBER", "ADMIN", "COACH")
+                .requestMatchers(HttpMethod.GET, "/api/community/comments").hasAnyRole("MEMBER", "ADMIN", "COACH")
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
                 .requestMatchers(HttpMethod.POST, "/api/community/posts/like/**").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.PUT, "/api/community/posts/**").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 // Cho phép truy cập endpoint comments
@@ -139,8 +146,13 @@ public class SecurityConfig {
                 "http://127.0.0.1:5500",
                 "http://localhost:5500",
                 "http://localhost:4173",
+<<<<<<< HEAD
                 "http://localhost:5173"
 
+=======
+                "http://localhost:5173",
+                "https://demoquitsmoking-frontend.onrender.com"
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of(

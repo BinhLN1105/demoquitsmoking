@@ -6,6 +6,15 @@ import websocketService from "../services/websocketService"; // Import WebSocket
 const AuthContext = createContext();
 
 const authReducer = (state, action) => {
+<<<<<<< HEAD
+=======
+  console.log(
+    "AuthContext (Reducer): Hành động được gửi đi:",
+    action.type,
+    "Payload:",
+    action.payload
+  );
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
   switch (action.type) {
     case "LOGIN_START":
       return {
@@ -36,7 +45,14 @@ const authReducer = (state, action) => {
         token: userPayload.token, // Lấy token từ payload
         error: null,
       };
+<<<<<<< HEAD
 
+=======
+      console.log(
+        "AuthContext (Reducer): LOGIN_SUCCESS - Trạng thái mới:",
+        newState
+      );
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
       return newState;
     case "LOGIN_FAILURE":
       const failureState = {
@@ -47,7 +63,14 @@ const authReducer = (state, action) => {
         token: null,
         error: action.payload,
       };
+<<<<<<< HEAD
 
+=======
+      console.log(
+        "AuthContext (Reducer): LOGIN_FAILURE - Trạng thái mới:",
+        failureState
+      );
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
       return failureState;
     case "LOGOUT":
       const logoutState = {
@@ -57,13 +80,21 @@ const authReducer = (state, action) => {
         token: null,
         error: null,
       };
+<<<<<<< HEAD
 
+=======
+      console.log(
+        "AuthContext (Reducer): LOGOUT - Trạng thái mới:",
+        logoutState
+      );
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
       return logoutState;
     case "UPDATE_USER":
       const updatedUserState = {
         ...state,
         user: { ...state.user, ...action.payload }, // Cập nhật các trường user hiện có
       };
+<<<<<<< HEAD
 
       return updatedUserState;
     case "SET_LOADING":
@@ -77,6 +108,33 @@ const authReducer = (state, action) => {
     case "CLEAR_ERROR":
       const clearedErrorState = { ...state, error: null };
 
+=======
+      console.log(
+        "AuthContext (Reducer): UPDATE_USER - Trạng thái mới:",
+        updatedUserState
+      );
+      return updatedUserState;
+    case "SET_LOADING":
+      const loadingState = { ...state, loading: action.payload };
+      console.log(
+        "AuthContext (Reducer): SET_LOADING - Trạng thái mới:",
+        loadingState
+      );
+      return loadingState;
+    case "SET_ERROR":
+      const errorState = { ...state, error: action.payload, loading: false };
+      console.log(
+        "AuthContext (Reducer): SET_ERROR - Trạng thái mới:",
+        errorState
+      );
+      return errorState;
+    case "CLEAR_ERROR":
+      const clearedErrorState = { ...state, error: null };
+      console.log(
+        "AuthContext (Reducer): CLEAR_ERROR - Trạng thái mới:",
+        clearedErrorState
+      );
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
       return clearedErrorState;
     default:
       return state;
@@ -98,6 +156,22 @@ export const AuthProvider = ({ children }) => {
     const token = authService.getToken();
     const user = authService.getCurrentUser();
 
+<<<<<<< HEAD
+=======
+    console.log(
+      "AuthContext: Kiểm tra đồng bộ - State isAuthenticated:",
+      state.isAuthenticated
+    );
+    console.log(
+      "AuthContext: Kiểm tra đồng bộ - Token trong localStorage:",
+      token ? "Có" : "Không"
+    );
+    console.log(
+      "AuthContext: Kiểm tra đồng bộ - User trong localStorage:",
+      user ? "Có" : "Không"
+    );
+
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
     // Nếu state nghĩ đã login nhưng không có token/user → logout
     if (state.isAuthenticated && (!token || !user)) {
       console.warn("AuthContext: Phát hiện mất đồng bộ - logout tự động");
@@ -105,6 +179,12 @@ export const AuthProvider = ({ children }) => {
     }
     // Nếu có token/user nhưng state chưa login → login
     else if (!state.isAuthenticated && token && user) {
+<<<<<<< HEAD
+=======
+      console.log(
+        "AuthContext: Phát hiện có token/user mà chưa login - đồng bộ state"
+      );
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
       dispatch({
         type: "LOGIN_SUCCESS",
         payload: { ...user, token },
@@ -171,6 +251,10 @@ export const AuthProvider = ({ children }) => {
     dispatch({ type: "LOGIN_START" });
     try {
       const response = await authService.login(credentials);
+<<<<<<< HEAD
+=======
+      console.log("AuthContext: Login response:", response);
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 
       if (response.success) {
         const userData = response.user;
@@ -194,6 +278,12 @@ export const AuthProvider = ({ children }) => {
           websocketService.connect(
             userData.id,
             'user-activity',
+<<<<<<< HEAD
+=======
+            (message) => {
+              console.log('User activity message:', message);
+            }
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
           );
         }
 

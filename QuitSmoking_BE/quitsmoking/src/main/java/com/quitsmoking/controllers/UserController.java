@@ -24,7 +24,10 @@ import java.nio.file.Files;
 
 @RestController
 @RequestMapping("/api/user")
+<<<<<<< HEAD
 @CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 public class UserController {
     private boolean isUrl(String str) {
         return str != null && (str.startsWith("http://") || str.startsWith("https://"));

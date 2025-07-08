@@ -31,9 +31,12 @@ const AdminPanel = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteConsultationId, setDeleteConsultationId] = useState(null);
   const [deleteSuccessMessage, setDeleteSuccessMessage] = useState("");
+<<<<<<< HEAD
   const [showRoleUpdateModal, setShowRoleUpdateModal] = useState(false);
   const [roleUpdateMessage, setRoleUpdateMessage] = useState("");
   const [roleUpdateSuccess, setRoleUpdateSuccess] = useState(true);
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 
   const tabs = [
     { id: "dashboard", name: "Tổng quan", icon: "📊" },
@@ -269,11 +272,16 @@ const AdminPanel = () => {
         { role: selectedRole }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
+<<<<<<< HEAD
+=======
+      
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
       if (response.status === 200) {
         setUsers(prevUsers => prevUsers.map(u =>
           u.id === userId ? { ...u, role: selectedRole } : u
         ));
         setEditRoleId(null);
+<<<<<<< HEAD
         setRoleUpdateMessage('Cập nhật vai trò thành công!');
         setRoleUpdateSuccess(true);
         setShowRoleUpdateModal(true);
@@ -294,6 +302,22 @@ const AdminPanel = () => {
       setRoleUpdateMessage('Lỗi khi cập nhật role: ' + (err.response?.data?.message || err.message));
       setRoleUpdateSuccess(false);
       setShowRoleUpdateModal(true);
+=======
+        alert('Cập nhật vai trò thành công!');
+      }
+    } catch (err) {
+      console.error('Error updating role:', err);
+      
+      if (err.response?.status === 401) {
+        alert('Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại!');
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/login';
+        return;
+      }
+      
+      alert('Lỗi khi cập nhật role: ' + (err.response?.data?.message || err.message));
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
     }
   };
 
@@ -1165,7 +1189,11 @@ const EncryptionTab = () => (
       </div>
 
       {showDetailId && userDetail && (
+<<<<<<< HEAD
           <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
+=======
+        <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50 px-2">
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
           <div className="bg-white rounded-lg shadow-lg p-2 sm:p-4 md:p-6 w-full max-w-lg md:max-w-2xl relative max-h-[90vh] overflow-y-auto">
             <button
               className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700 text-xl font-bold"
@@ -1537,6 +1565,7 @@ const EncryptionTab = () => (
           </div>
         </div>
       )}
+<<<<<<< HEAD
 
       {/* Modal thông báo cập nhật role */}
       {showRoleUpdateModal && (
@@ -1555,6 +1584,8 @@ const EncryptionTab = () => (
           </div>
         </div>
       )}
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
     </div>
   );
 };

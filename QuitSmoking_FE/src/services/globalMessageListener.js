@@ -17,7 +17,11 @@ class GlobalMessageListener {
         this.userId = userId;
         this.isCoach = isCoach;
         
+<<<<<<< HEAD
         const socket = new SockJS('http://localhost:8080/ws');
+=======
+        const socket = new SockJS(`${import.meta.env.VITE_API_URL}/ws`);
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
         this.stompClient = new Client({
             webSocketFactory: () => socket,
             debug: () => {},

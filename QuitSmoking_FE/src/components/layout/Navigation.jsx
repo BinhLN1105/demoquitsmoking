@@ -208,7 +208,11 @@ if (isAuthenticated) {
                     src={
                       user.pictureUrl.startsWith("http")
                         ? user.pictureUrl
+<<<<<<< HEAD
                         : `http://localhost:8080${user.pictureUrl}`
+=======
+                        : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
                     }
                     alt="User Avatar"
                     className="h-8 w-8 rounded-full object-cover"
@@ -343,7 +347,11 @@ if (isAuthenticated) {
                       src={
                         user.pictureUrl.startsWith("http")
                           ? user.pictureUrl
+<<<<<<< HEAD
                           : `http://localhost:8080${user.pictureUrl}`
+=======
+                          : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
                       }
                       alt="User Avatar"
                       className="h-8 w-8 rounded-full object-cover"

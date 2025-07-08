@@ -16,7 +16,11 @@ class WebSocketService {
         // Disconnect existing connection if any
         this.disconnect();
         
+<<<<<<< HEAD
         const socket = new SockJS('http://localhost:8080/ws');
+=======
+        const socket = new SockJS(`${import.meta.env.VITE_API_URL}/ws`);
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
         this.stompClient = new Client({
             webSocketFactory: () => socket,
             debug: () => {},
@@ -79,7 +83,11 @@ class WebSocketService {
         };
 
         this.stompClient.onWebSocketClose = () => {
+<<<<<<< HEAD
 
+=======
+            console.log('WebSocketService: WebSocket connection closed');
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
             this.connected = false;
             this.stopHeartbeat();
             
@@ -93,6 +101,10 @@ class WebSocketService {
                     }
                 }, 5000);
             } else if (this.reconnectAttempts >= this.maxReconnectAttempts) {
+<<<<<<< HEAD
+=======
+                console.log('WebSocketService: Max reconnection attempts reached. Stopping reconnection.');
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
             }
         };
 

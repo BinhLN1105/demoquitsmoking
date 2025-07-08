@@ -20,7 +20,10 @@ const Achievements = () => {
     cigarettesAvoided: 0,
     totalAchievements: 0,
   });
+<<<<<<< HEAD
   const [shareModal, setShareModal] = useState({ open: false, success: true, message: "" });
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 
   const achievementCategories = {
     ALL: "Tất cả",
@@ -205,6 +208,11 @@ const Achievements = () => {
   const handleShareAchievement = async (achievementId) => {
     try {
       await apiService.shareAchievement(achievementId);
+<<<<<<< HEAD
+=======
+      
+      // Update local state
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
       setUserAchievements(prev => 
         prev.map(ua => 
           ua.achievementId === achievementId
@@ -212,9 +220,17 @@ const Achievements = () => {
             : ua
         )
       );
+<<<<<<< HEAD
       setShareModal({ open: true, success: true, message: "Đã chia sẻ thành tích với cộng đồng!" });
     } catch (err) {
       setShareModal({ open: true, success: false, message: "Không thể chia sẻ thành tích. Vui lòng thử lại sau." });
+=======
+
+      // Show success message
+      alert("Đã chia sẻ thành tích với cộng đồng!");
+    } catch (err) {
+      alert("Không thể chia sẻ thành tích. Vui lòng thử lại sau.");
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
     }
   };
 
@@ -590,6 +606,7 @@ const Achievements = () => {
         achievement={newAchievement} 
         onClose={() => setNewAchievement(null)} 
       />
+<<<<<<< HEAD
       {/* Share Achievement Modal */}
       {shareModal.open && (
         <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
@@ -614,6 +631,8 @@ const Achievements = () => {
           </div>
         </div>
       )}
+=======
+>>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
     </div>
   );
 };
