@@ -15,19 +15,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/achievements")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-@CrossOrigin(origins = "http://localhost:3000")
-=======
-
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
-@CrossOrigin(origins = "http://localhost:3000")
->>>>>>> 2ab7ab5 (Deploy)
-=======
-@CrossOrigin(origins = "http://localhost:3000")
->>>>>>> 9ac8281 (First commit)
 public class AchievementController {
     @Autowired
     private AchievementService achievementService;

@@ -197,19 +197,7 @@ const ProfilePage = () => {
                   src={
                     user.pictureUrl.startsWith("http")
                       ? user.pictureUrl
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      : `http://localhost:8080${user.pictureUrl}`
-=======
                       : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
-                      : `http://localhost:8080${user.pictureUrl}`
->>>>>>> 2ab7ab5 (Deploy)
-=======
-                      : `http://localhost:8080${user.pictureUrl}`
->>>>>>> 9ac8281 (First commit)
                   }
                   alt="Avatar"
                   className="h-16 w-16 rounded-full object-cover"

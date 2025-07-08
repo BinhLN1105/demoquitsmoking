@@ -193,19 +193,7 @@ const HomePage = () => {
           <div className="text-center text-gray-400 text-sm mt-8 border-t border-gray-700 pt-8">
             <p className="hover:text-green-400 transition-colors duration-300">
               <a href="https://ptdat30.github.io/digital-cv-portfolio/" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               © {new Date().getFullYear()} The QuitSmoking application was developed by F4_VanTai's team
-=======
-              © {new Date().getFullYear()} QuitSmoking made by Group 3
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
-              © {new Date().getFullYear()} The QuitSmoking application was developed by F4_VanTai's team
->>>>>>> 2ab7ab5 (Deploy)
-=======
-              © {new Date().getFullYear()} QuitSmoking made by Group 3
->>>>>>> 9ac8281 (First commit)
               </a>
             </p>
           </div>

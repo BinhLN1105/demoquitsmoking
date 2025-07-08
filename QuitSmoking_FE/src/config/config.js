@@ -1,17 +1,5 @@
 const config = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  API_BASE_URL: import.meta.env.VITE_API_BASE_URL || "http://localhost:8080",
-=======
   API_BASE_URL: import.meta.env.VITE_API_BASE_URL || `${import.meta.env.VITE_API_URL}`,
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
-  API_BASE_URL: import.meta.env.VITE_API_BASE_URL || "http://localhost:8080",
->>>>>>> 2ab7ab5 (Deploy)
-=======
-  API_BASE_URL: import.meta.env.VITE_API_BASE_URL || "http://localhost:8080",
->>>>>>> 9ac8281 (First commit)
   endpoints: {
     // Authentication
     register: "/api/auth/register",

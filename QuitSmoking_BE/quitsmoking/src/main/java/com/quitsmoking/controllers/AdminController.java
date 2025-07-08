@@ -130,25 +130,9 @@ public class AdminController {
         }
         try {
             User user = adminService.updateUserRole(userId, newRole);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             UserAdminResponse userDto = new UserAdminResponse(user);
             result.put("success", true);
             result.put("user", userDto);
-=======
-            result.put("success", true);
-            result.put("user", user);
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
-            UserAdminResponse userDto = new UserAdminResponse(user);
-            result.put("success", true);
-            result.put("user", userDto);
->>>>>>> 2ab7ab5 (Deploy)
-=======
-            result.put("success", true);
-            result.put("user", user);
->>>>>>> 9ac8281 (First commit)
         } catch (Exception e) {
             result.put("success", false);
             result.put("message", e.getMessage());
