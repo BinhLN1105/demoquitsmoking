@@ -7,17 +7,7 @@ import AvatarFromName from '../common/AvatarFromName';
 import useMembershipError from "../../hooks/useMembershipError";
 import MembershipUpgradeModal from "../common/MembershipUpgradeModal";
 import notificationService from "../../services/notificationService";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
-=======
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
-import { useNavigate } from "react-router-dom";
->>>>>>> 2ab7ab5 (Deploy)
-=======
->>>>>>> 9ac8281 (First commit)
 
 // Thông tin mẫu cho coach theo email
 const defaultCoachInfoByEmail = {
@@ -89,19 +79,7 @@ const CoachConsultation = () => {
   // Kiểm tra quyền truy cập cho guest
   const isGuest = user?.role === "GUEST";
   const hasAccess = !isGuest || isCoach;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const navigate = useNavigate();
-=======
-  
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
-  const navigate = useNavigate();
->>>>>>> 2ab7ab5 (Deploy)
-=======
-  
->>>>>>> 9ac8281 (First commit)
   const [sessions, setSessions] = useState([]);
   const [selectedSession, setSelectedSession] = useState(null);
   const [activeSession, setActiveSession] = useState(null);
@@ -499,11 +477,6 @@ const CoachConsultation = () => {
     <div className="min-h-screen bg-gray-50 py-8">
       {/* Hiển thị thông báo nâng cấp cho guest */}
       {!hasAccess && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2ab7ab5 (Deploy)
           <div className="min-h-screen bg-gray-50 py-8">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="bg-white rounded-lg shadow-lg p-8 text-center">
@@ -571,46 +544,6 @@ const CoachConsultation = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 9ac8281 (First commit)
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">🔒</div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Tính năng dành riêng cho thành viên
-            </h1>
-            <p className="text-lg text-gray-600 mb-6">
-              Tư vấn với chuyên gia coach là tính năng premium chỉ dành cho thành viên. 
-              Vui lòng nâng cấp tài khoản để truy cập tính năng này.
-            </p>
-            <div className="space-y-4">
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <h3 className="font-semibold text-green-800 mb-2">✨ Lợi ích khi nâng cấp:</h3>
-                <ul className="text-green-700 text-left space-y-1">
-                  <li>• Tư vấn trực tiếp với chuyên gia cai nghiện</li>
-                  <li>• Hỗ trợ 24/7 qua chat và video call</li>
-                  <li>• Lộ trình cai nghiện cá nhân hóa</li>
-                  <li>• Theo dõi tiến trình chi tiết</li>
-                  <li>• Tham gia cộng đồng hỗ trợ</li>
-                </ul>
-              </div>
-              <button
-                onClick={() => window.location.href = '/membership'}
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition duration-300 text-lg"
-              >
-                Nâng Cấp Ngay
-              </button>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
->>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
-=======
->>>>>>> 2ab7ab5 (Deploy)
-=======
->>>>>>> 9ac8281 (First commit)
       )}
 
       {/* Hiển thị nội dung chính chỉ khi có quyền truy cập */}

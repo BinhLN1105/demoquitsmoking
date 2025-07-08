@@ -6,10 +6,7 @@ import AvatarFromName from '../common/AvatarFromName';
 import useMembershipError from "../../hooks/useMembershipError";
 import MembershipUpgradeModal from "../common/MembershipUpgradeModal";
 import CommentSection from '../community/CommentSection';
-<<<<<<< HEAD
 import axios from 'axios';
-=======
->>>>>>> 9ac8281 (First commit)
 
 const Community = () => {
   const navigate = useNavigate();
@@ -28,7 +25,6 @@ const Community = () => {
   const [loadingPostTypes, setLoadingPostTypes] = useState(true);
   const [errorPostTypes, setErrorPostTypes] = useState(null);
   const [selectedFilter, setSelectedFilter] = useState('ALL');
-<<<<<<< HEAD
 
   // Sử dụng hook xử lý lỗi membership
   const { showUpgradeModal, errorMessage, handleApiError, closeUpgradeModal } = useMembershipError();
@@ -38,13 +34,6 @@ const Community = () => {
   const [deleteMessage, setDeleteMessage] = useState("");
   const [showGuestActionModal, setShowGuestActionModal] = useState(false);
   const [guestActionMessage, setGuestActionMessage] = useState("");
-=======
-  const [accessDeniedForGuest, setAccessDeniedForGuest] = useState(false);
-  
-  // Sử dụng hook xử lý lỗi membership
-  const { showUpgradeModal, errorMessage, handleApiError, closeUpgradeModal } = useMembershipError();
-  const [expandedPostId, setExpandedPostId] = useState(null);
->>>>>>> 9ac8281 (First commit)
 
   useEffect(() => {
     let isMounted = true;
@@ -73,22 +62,9 @@ const Community = () => {
       try {
         setLoadingPosts(true);
         setErrorPosts(null);
-<<<<<<< HEAD
 
         if (authLoading) return;
 
-=======
-        setAccessDeniedForGuest(false);
-
-        if (authLoading) return;
-
-        if (user && user.role === 'GUEST' && user.membership?.id === 'FREE_TRIAL_PLAN') {
-          setAccessDeniedForGuest(true);
-          setLoadingPosts(false);
-          return;
-        }
-
->>>>>>> 9ac8281 (First commit)
         const token = localStorage.getItem('jwt_token');
         const headers = {
           'Content-Type': 'application/json',
@@ -97,29 +73,10 @@ const Community = () => {
           headers['Authorization'] = `Bearer ${token}`;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts`, {
-=======
-        const response = await fetch('http://localhost:8080/api/community/posts', {
->>>>>>> 2ab7ab5 (Deploy)
           headers: headers,
         });
 
-=======
-        const response = await fetch('http://localhost:8080/api/community/posts', {
-          headers: headers,
-        });
-
-        if (response.status === 403) {
-          if (isMounted) {
-            setAccessDeniedForGuest(true);
-            setErrorPosts('Bạn không có quyền truy cập chức năng này. Vui lòng nâng cấp gói thành viên.');
-          }
-          return;
-        }
-
->>>>>>> 9ac8281 (First commit)
         if (!response.ok) {
           const errorData = await response.json();
           throw new Error(`HTTP Error: ${response.status} - ${errorData.error || response.statusText}`);
@@ -143,24 +100,13 @@ const Community = () => {
           pictureUrl: post.avatarUrl
               ? (post.avatarUrl.startsWith("http")
                   ? post.avatarUrl
-<<<<<<< HEAD
-<<<<<<< HEAD
                   : `${import.meta.env.VITE_API_URL}${post.avatarUrl}`)
-=======
-                  : `http://localhost:8080${post.avatarUrl}`)
->>>>>>> 2ab7ab5 (Deploy)
-=======
-                  : `http://localhost:8080${post.avatarUrl}`)
->>>>>>> 9ac8281 (First commit)
               : null,
           username: post.username,
           firstName: post.firstName,
           lastName: post.lastName,
-<<<<<<< HEAD
           role: post.role,
           membershipPlanId: post.membershipPlanId,
-=======
->>>>>>> 9ac8281 (First commit)
         }));
 
         if (isMounted) {
@@ -178,16 +124,7 @@ const Community = () => {
     };
 
     if (!authLoading) {
-<<<<<<< HEAD
       fetchPostData();
-=======
-      if (user && user.role === 'GUEST' && (!user.membership || user.membership.id === 'FREE_TRIAL_PLAN')) {
-        setAccessDeniedForGuest(true);
-        setLoadingPosts(false);
-      } else {
-        fetchPostData();
-      }
->>>>>>> 9ac8281 (First commit)
     }
 
     initializePostTypes();
@@ -230,15 +167,7 @@ const Community = () => {
         postType: selectedPostType,
         title: newTitle,
       };
-<<<<<<< HEAD
-<<<<<<< HEAD
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts`, {
-=======
-      const response = await fetch('http://localhost:8080/api/community/posts', {
->>>>>>> 2ab7ab5 (Deploy)
-=======
-      const response = await fetch('http://localhost:8080/api/community/posts', {
->>>>>>> 9ac8281 (First commit)
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -261,24 +190,13 @@ const Community = () => {
           pictureUrl: user.pictureUrl
               ? (user.pictureUrl.startsWith("http")
                   ? user.pictureUrl
-<<<<<<< HEAD
-<<<<<<< HEAD
                   : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`)
-=======
-                  : `http://localhost:8080${user.pictureUrl}`)
->>>>>>> 2ab7ab5 (Deploy)
-=======
-                  : `http://localhost:8080${user.pictureUrl}`)
->>>>>>> 9ac8281 (First commit)
               : null,
           username: user.username,
           firstName: user.firstName,
           lastName: user.lastName,
-<<<<<<< HEAD
           role: user.role,
           membershipPlanId: user.membershipPlanId,
-=======
->>>>>>> 9ac8281 (First commit)
         };
 
         setPosts(prevPosts => [createdPost, ...prevPosts]);
@@ -294,7 +212,6 @@ const Community = () => {
     }
   };
 
-<<<<<<< HEAD
   // Thêm hàm xác định danh hiệu và màu sắc
   const getUserBadge = (role, membershipPlanId) => {
     if (role === 'ADMIN') return { label: 'Quản trị viên', color: 'bg-red-100 text-red-700' };
@@ -331,8 +248,6 @@ const Community = () => {
     setShowGuestActionModal(true);
   };
 
-=======
->>>>>>> 9ac8281 (First commit)
   return (
       <motion.div
           initial={{ opacity: 0 }}
@@ -453,7 +368,6 @@ const Community = () => {
                         </motion.div>
                     )}
 
-<<<<<<< HEAD
                     {/* Post Filters */}
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -485,66 +399,6 @@ const Community = () => {
                           </motion.button>
                       ))}
                     </motion.div>
-=======
-                    {/* Access Denied Message */}
-                    <AnimatePresence>
-                      {accessDeniedForGuest && (
-                          <motion.div
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0 }}
-                              className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative text-center"
-                              role="alert"
-                          >
-                            <strong className="font-bold">Truy cập bị từ chối!</strong>
-                            <span className="block sm:inline ml-2">Chức năng này không dành cho khách.</span>
-                            <p className="mt-2">Vui lòng nâng cấp gói thành viên để truy cập toàn bộ tính năng cộng đồng.</p>
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                onClick={() => navigate('/membership')}
-                                className="mt-4 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition duration-300 shadow-md w-full sm:w-auto"
-                            >
-                              Nâng Cấp Ngay
-                            </motion.button>
-                          </motion.div>
-                      )}
-                    </AnimatePresence>
-
-                    {/* Post Filters */}
-                    {!accessDeniedForGuest && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.3 }}
-                            className="flex flex-wrap gap-2 my-4"
-                        >
-                          {['ALL', 'ACHIEVEMENT_SHARE', 'MOTIVATION', 'QUESTION', 'ADVICE'].map((filter) => (
-                              <motion.button
-                                  key={filter}
-                                  whileHover={{ scale: 1.05 }}
-                                  whileTap={{ scale: 0.95 }}
-                                  onClick={() => setSelectedFilter(filter)}
-                                  className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
-                                      selectedFilter === filter
-                                          ? filter === 'ALL' ? 'bg-green-600 text-white' :
-                                              filter === 'ACHIEVEMENT_SHARE' ? 'bg-yellow-500 text-white' :
-                                                  filter === 'MOTIVATION' ? 'bg-blue-500 text-white' :
-                                                      filter === 'QUESTION' ? 'bg-purple-500 text-white' :
-                                                          'bg-green-500 text-white'
-                                          : filter === 'ALL' ? 'bg-green-100 text-green-700 hover:bg-green-200' :
-                                              filter === 'ACHIEVEMENT_SHARE' ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' :
-                                                  filter === 'MOTIVATION' ? 'bg-blue-100 text-blue-700 hover:bg-blue-200' :
-                                                      filter === 'QUESTION' ? 'bg-purple-100 text-purple-700 hover:bg-purple-200' :
-                                                          'bg-green-100 text-green-700 hover:bg-green-200'
-                                  }`}
-                              >
-                                {filter}
-                              </motion.button>
-                          ))}
-                        </motion.div>
-                    )}
->>>>>>> 9ac8281 (First commit)
 
                     {/* Posts List */}
                     <div className="space-y-6">
@@ -568,11 +422,7 @@ const Community = () => {
                           </motion.div>
                       )}
 
-<<<<<<< HEAD
                       {!loadingPosts && !errorPosts && filterPosts.length === 0 && (
-=======
-                      {!loadingPosts && !errorPosts && filterPosts.length === 0 && !accessDeniedForGuest && (
->>>>>>> 9ac8281 (First commit)
                           <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
@@ -582,11 +432,7 @@ const Community = () => {
                           </motion.div>
                       )}
 
-<<<<<<< HEAD
                       {!loadingPosts && !errorPosts && filterPosts.length > 0 && (
-=======
-                      {!loadingPosts && !errorPosts && filterPosts.length > 0 && !accessDeniedForGuest && (
->>>>>>> 9ac8281 (First commit)
                           <AnimatePresence>
                             {filterPosts.map((post) => (
                                 <motion.div
@@ -603,15 +449,7 @@ const Community = () => {
                                             whileHover={{ scale: 1.05 }}
                                             src={post.pictureUrl.startsWith("http")
                                                 ? post.pictureUrl
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 : `${import.meta.env.VITE_API_URL}${post.pictureUrl}`}
-=======
-                                                : `http://localhost:8080${post.pictureUrl}`}
->>>>>>> 2ab7ab5 (Deploy)
-=======
-                                                : `http://localhost:8080${post.pictureUrl}`}
->>>>>>> 9ac8281 (First commit)
                                             alt={post.username}
                                             className="w-12 h-12 rounded-full object-cover border-2 border-green-200"
                                         />
@@ -628,7 +466,6 @@ const Community = () => {
                                     <div className="flex-1 w-full">
                                       <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2">
                                         <h4 className="font-bold text-gray-800 text-base sm:text-lg">{post.username}</h4>
-<<<<<<< HEAD
                                         {(() => {
                                           const badge = getUserBadge(post.role, post.membershipPlanId);
                                           return (
@@ -637,19 +474,12 @@ const Community = () => {
                                             </span>
                                           );
                                         })()}
-=======
-                                        <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full mt-1 sm:mt-0">
-                  Active Member
-                </span>
->>>>>>> 9ac8281 (First commit)
                                       </div>
                                       <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-xs sm:text-sm text-gray-500 mt-1">
                                         <span>🗓️ {post.createdAt}</span>
                                       </div>
                                     </div>
                                     <div className="text-right mt-2 sm:mt-0">
-<<<<<<< HEAD
-<<<<<<< HEAD
                                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                                           post.postType === 'ACHIEVEMENT_SHARE' ? 'bg-yellow-100 text-yellow-700' :
                                               post.postType === 'MOTIVATION' ? 'bg-blue-100 text-blue-700' :
@@ -659,22 +489,6 @@ const Community = () => {
                                       }`}>
                                         {postTypes.find(type => type === post.postType)}
                                       </span>
-=======
-=======
->>>>>>> 9ac8281 (First commit)
-              <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                  post.postType === 'ACHIEVEMENT_SHARE' ? 'bg-yellow-100 text-yellow-700' :
-                      post.postType === 'MOTIVATION' ? 'bg-blue-100 text-blue-700' :
-                          post.postType === 'QUESTION' ? 'bg-purple-100 text-purple-700' :
-                              post.postType === 'ADVICE' ? 'bg-green-100 text-green-700' :
-                                  'bg-gray-100 text-gray-700'
-              }`}>
-                {postTypes.find(type => type === post.postType)}
-              </span>
-<<<<<<< HEAD
->>>>>>> 2ab7ab5 (Deploy)
-=======
->>>>>>> 9ac8281 (First commit)
                                     </div>
                                   </div>
 
@@ -691,13 +505,9 @@ const Community = () => {
                                     <motion.button
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
-<<<<<<< HEAD
                                         className={`flex items-center space-x-2 text-gray-600 transition duration-300 ${user && user.role === 'GUEST' ? 'opacity-60 cursor-not-allowed' : 'hover:text-red-500'}`}
                                         onClick={user && user.role === 'GUEST' ? () => handleGuestAction('Bạn cần đăng ký thành viên để thả tim bài viết!') : undefined}
                                         disabled={user && user.role === 'GUEST'}
-=======
-                                        className="flex items-center space-x-2 text-gray-600 hover:text-red-500 transition duration-300"
->>>>>>> 9ac8281 (First commit)
                                     >
                                       <span className="text-lg">❤️</span>
                                       <span className="text-sm">{post.likesCount}</span>
@@ -706,7 +516,6 @@ const Community = () => {
                                     <motion.button
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
-<<<<<<< HEAD
                                         className={`flex items-center space-x-2 transition duration-300 ${user && user.role === 'GUEST' ? 'opacity-60 cursor-not-allowed' : expandedPostId === post.id ? 'text-blue-500' : 'text-gray-600 hover:text-blue-500'}`}
                                         onClick={user && user.role === 'GUEST' ? () => handleGuestAction('Bạn cần đăng ký thành viên để bình luận!') : () => setExpandedPostId(expandedPostId === post.id ? null : post.id)}
                                         disabled={user && user.role === 'GUEST'}
@@ -714,35 +523,18 @@ const Community = () => {
                                       <span className="text-lg">💬</span>
                                       <span className="text-sm">Bình luận</span>
                                       <span className="text-sm bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{post.commentsCount}</span>
-=======
-                                        onClick={() => setExpandedPostId(expandedPostId === post.id ? null : post.id)}
-                                        className={`flex items-center space-x-2 transition duration-300 ${
-                                            expandedPostId === post.id ? 'text-blue-500' : 'text-gray-600 hover:text-blue-500'
-                                        }`}
-                                    >
-                                      <span className="text-lg">💬</span>
-                                      <span className="text-sm">Bình luận</span>
-                                      <span className="text-sm bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">
-                                        {post.commentsCount}
-                                      </span>
->>>>>>> 9ac8281 (First commit)
                                     </motion.button>
 
                                     <motion.button
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
-<<<<<<< HEAD
                                         className={`flex items-center space-x-2 text-gray-600 transition duration-300 ${user && user.role === 'GUEST' ? 'opacity-60 cursor-not-allowed' : 'hover:text-purple-500'}`}
                                         onClick={user && user.role === 'GUEST' ? () => handleGuestAction('Bạn cần đăng ký thành viên để chia sẻ bài viết!') : undefined}
                                         disabled={user && user.role === 'GUEST'}
-=======
-                                        className="flex items-center space-x-2 text-gray-600 hover:text-purple-500 transition duration-300"
->>>>>>> 9ac8281 (First commit)
                                     >
                                       <span className="text-lg">🔗</span>
                                       <span className="text-sm">Chia sẻ</span>
                                     </motion.button>
-<<<<<<< HEAD
 
                                     {user && user.role === 'ADMIN' && (
                                       <button
@@ -756,12 +548,6 @@ const Community = () => {
 
                                   {/* Expanded Comment Section */}
                                   {expandedPostId === post.id && user && user.role !== 'GUEST' && (
-=======
-                                  </div>
-
-                                  {/* Expanded Comment Section */}
-                                  {expandedPostId === post.id && (
->>>>>>> 9ac8281 (First commit)
                                       <motion.div
                                           initial={{ opacity: 0, height: 0 }}
                                           animate={{ opacity: 1, height: 'auto' }}
@@ -956,7 +742,6 @@ const Community = () => {
             onClose={closeUpgradeModal}
             message={errorMessage}
           />
-<<<<<<< HEAD
 
           {/* Modal xác nhận xóa bài viết */}
           {showDeleteModal && (
@@ -993,8 +778,6 @@ const Community = () => {
 
           {/* Modal thông báo cho guest */}
           <MembershipUpgradeModal isOpen={showGuestActionModal} onClose={() => setShowGuestActionModal(false)} message={guestActionMessage} />
-=======
->>>>>>> 9ac8281 (First commit)
         </div>
       </motion.div>
     );
