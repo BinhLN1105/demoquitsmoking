@@ -20,7 +20,7 @@
 # Thư mục dependencies của Node.js cho Frontend
 # Được tạo khi chạy 'npm install' hoặc 'yarn install'
 /QuitSmoking_FE/node_modules/
-
+/QuitSmoking_BE/quitsmoking/src/main/resources/application.properties
 
 # Thư mục đầu ra của quá trình build Frontend (ví dụ: 'dist' cho Vite/Webpack)
 /QuitSmoking_FE/dist/
