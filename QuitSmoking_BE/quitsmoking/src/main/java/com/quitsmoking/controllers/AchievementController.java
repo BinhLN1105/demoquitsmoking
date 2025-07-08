@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/achievements")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @CrossOrigin(origins = "http://localhost:3000")
 =======
 
@@ -24,6 +25,9 @@ import java.util.stream.Collectors;
 =======
 @CrossOrigin(origins = "http://localhost:3000")
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+@CrossOrigin(origins = "http://localhost:3000")
+>>>>>>> 9ac8281 (First commit)
 public class AchievementController {
     @Autowired
     private AchievementService achievementService;

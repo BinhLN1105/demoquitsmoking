@@ -2,6 +2,7 @@ package com.quitsmoking.config;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.context.annotation.Configuration;
 =======
 import org.springframework.beans.factory.annotation.Value;
@@ -11,11 +12,15 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 =======
 import org.springframework.context.annotation.Configuration;
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+import org.springframework.context.annotation.Configuration;
+>>>>>>> 9ac8281 (First commit)
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -38,6 +43,8 @@ public class WebConfig implements WebMvcConfigurer {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/uploads/**")

@@ -16,12 +16,16 @@ import java.util.List;
 @RequestMapping("/api/chat")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 @CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+@CrossOrigin(origins = {"http://localhost:4173", "http://localhost:3000", "http://localhost:5173"})
+>>>>>>> 9ac8281 (First commit)
 public class ChatMessageController {
     
     @Autowired

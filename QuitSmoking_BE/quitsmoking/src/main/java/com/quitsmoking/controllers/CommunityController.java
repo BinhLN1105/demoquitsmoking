@@ -13,12 +13,15 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.security.access.prepost.PreAuthorize;
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 import org.springframework.security.access.prepost.PreAuthorize;
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
 
 import java.util.Collections; // Import Collections
 import org.slf4j.Logger; // Import Logger
@@ -28,12 +31,16 @@ import org.slf4j.LoggerFactory; // Import LoggerFactory
 @RequestMapping("/api/community")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @CrossOrigin(origins = "http://localhost:3000")
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 @CrossOrigin(origins = "http://localhost:3000")
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+@CrossOrigin(origins = "http://localhost:3000")
+>>>>>>> 9ac8281 (First commit)
 public class CommunityController {
 
     private static final Logger logger = LoggerFactory.getLogger(CommunityController.class); // Initialize logger
@@ -95,6 +102,7 @@ public class CommunityController {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2ab7ab5 (Deploy)
     @DeleteMapping("/posts/{postId}")
@@ -114,6 +122,8 @@ public class CommunityController {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
     // DTO classes
     public static class CreatePostRequest {
         private String title;

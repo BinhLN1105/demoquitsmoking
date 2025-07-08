@@ -9,12 +9,15 @@ import MembershipUpgradeModal from "../common/MembershipUpgradeModal";
 import notificationService from "../../services/notificationService";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 import { useNavigate } from "react-router-dom";
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
 
 // Thông tin mẫu cho coach theo email
 const defaultCoachInfoByEmail = {
@@ -88,6 +91,7 @@ const CoachConsultation = () => {
   const hasAccess = !isGuest || isCoach;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const navigate = useNavigate();
 =======
   
@@ -95,6 +99,9 @@ const CoachConsultation = () => {
 =======
   const navigate = useNavigate();
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+  
+>>>>>>> 9ac8281 (First commit)
   const [sessions, setSessions] = useState([]);
   const [selectedSession, setSelectedSession] = useState(null);
   const [activeSession, setActiveSession] = useState(null);
@@ -494,6 +501,7 @@ const CoachConsultation = () => {
       {!hasAccess && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2ab7ab5 (Deploy)
           <div className="min-h-screen bg-gray-50 py-8">
@@ -565,6 +573,8 @@ const CoachConsultation = () => {
           </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">🔒</div>
@@ -595,9 +605,12 @@ const CoachConsultation = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
       )}
 
       {/* Hiển thị nội dung chính chỉ khi có quyền truy cập */}

@@ -1,6 +1,7 @@
 // src/services/passwordResetAPI.js
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const API_BASE_URL = 'http://localhost:8080/api/auth';
 =======
 const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/auth`;
@@ -8,6 +9,9 @@ const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/auth`;
 =======
 const API_BASE_URL = 'http://localhost:8080/api/auth';
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+const API_BASE_URL = 'http://localhost:8080/api/auth';
+>>>>>>> 9ac8281 (First commit)
 
 export const passwordResetAPI = {
     // Gửi OTP đến email

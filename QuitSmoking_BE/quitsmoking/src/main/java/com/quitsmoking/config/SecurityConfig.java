@@ -90,6 +90,7 @@ public class SecurityConfig {
                 // Cho phép truy cập endpoint community
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2ab7ab5 (Deploy)
                 // Cho phép guest truy cập endpoint posts nhưng không được tạo bài viết và comment
@@ -99,13 +100,18 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/community/posts").hasAnyRole("MEMBER", "ADMIN", "COACH")
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
                 .requestMatchers(HttpMethod.POST, "/api/community/posts").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.GET, "/api/community/posts/**").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.GET, "/api/community/posts").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.GET, "/api/community/comments").hasAnyRole("MEMBER", "ADMIN", "COACH")
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
                 .requestMatchers(HttpMethod.POST, "/api/community/posts/like/**").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 .requestMatchers(HttpMethod.PUT, "/api/community/posts/**").hasAnyRole("MEMBER", "ADMIN", "COACH")
                 // Cho phép truy cập endpoint comments
@@ -154,6 +160,7 @@ public class SecurityConfig {
                 "http://localhost:4173",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "http://localhost:5173"
 
 =======
@@ -164,6 +171,10 @@ public class SecurityConfig {
                 "http://localhost:5173"
 
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+                "http://localhost:5173"
+
+>>>>>>> 9ac8281 (First commit)
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of(

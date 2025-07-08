@@ -22,12 +22,15 @@ const Achievements = () => {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [shareModal, setShareModal] = useState({ open: false, success: true, message: "" });
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
   const [shareModal, setShareModal] = useState({ open: false, success: true, message: "" });
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
 
   const achievementCategories = {
     ALL: "Tất cả",
@@ -214,12 +217,17 @@ const Achievements = () => {
       await apiService.shareAchievement(achievementId);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
       // Update local state
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+      
+      // Update local state
+>>>>>>> 9ac8281 (First commit)
       setUserAchievements(prev => 
         prev.map(ua => 
           ua.achievementId === achievementId
@@ -229,21 +237,27 @@ const Achievements = () => {
       );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       setShareModal({ open: true, success: true, message: "Đã chia sẻ thành tích với cộng đồng!" });
     } catch (err) {
       setShareModal({ open: true, success: false, message: "Không thể chia sẻ thành tích. Vui lòng thử lại sau." });
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
 
       // Show success message
       alert("Đã chia sẻ thành tích với cộng đồng!");
     } catch (err) {
       alert("Không thể chia sẻ thành tích. Vui lòng thử lại sau.");
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
       setShareModal({ open: true, success: true, message: "Đã chia sẻ thành tích với cộng đồng!" });
     } catch (err) {
       setShareModal({ open: true, success: false, message: "Không thể chia sẻ thành tích. Vui lòng thử lại sau." });
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
     }
   };
 
@@ -621,6 +635,7 @@ const Achievements = () => {
       />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2ab7ab5 (Deploy)
       {/* Share Achievement Modal */}
@@ -652,6 +667,8 @@ const Achievements = () => {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
     </div>
   );
 };

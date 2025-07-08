@@ -210,6 +210,7 @@ if (isAuthenticated) {
                         ? user.pictureUrl
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         : `http://localhost:8080${user.pictureUrl}`
 =======
                         : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
@@ -217,6 +218,9 @@ if (isAuthenticated) {
 =======
                         : `http://localhost:8080${user.pictureUrl}`
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+                        : `http://localhost:8080${user.pictureUrl}`
+>>>>>>> 9ac8281 (First commit)
                     }
                     alt="User Avatar"
                     className="h-8 w-8 rounded-full object-cover"
@@ -353,6 +357,7 @@ if (isAuthenticated) {
                           ? user.pictureUrl
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           : `http://localhost:8080${user.pictureUrl}`
 =======
                           : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
@@ -360,6 +365,9 @@ if (isAuthenticated) {
 =======
                           : `http://localhost:8080${user.pictureUrl}`
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+                          : `http://localhost:8080${user.pictureUrl}`
+>>>>>>> 9ac8281 (First commit)
                       }
                       alt="User Avatar"
                       className="h-8 w-8 rounded-full object-cover"

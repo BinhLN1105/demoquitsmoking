@@ -14,12 +14,16 @@ import java.util.List;
 @RequestMapping("/api/smoking-status") // Base URL cho API này
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @CrossOrigin(origins = "*")
 =======
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 @CrossOrigin(origins = "*")
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+@CrossOrigin(origins = "*")
+>>>>>>> 9ac8281 (First commit)
 public class SmokingStatusController {
 
     private final SmokingStatusService smokingStatusService;

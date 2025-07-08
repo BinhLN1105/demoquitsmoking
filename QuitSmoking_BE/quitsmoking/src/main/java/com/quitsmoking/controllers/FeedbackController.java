@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/feedback")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Cấu hình CORS cho Controller này. Tốt hơn nên cấu hình toàn cục trong WebConfig.java
 // @CrossOrigin(origins = "http://localhost:5173") // Thay bằng domain frontend của bạn
 =======
@@ -23,6 +24,10 @@ import org.springframework.web.bind.annotation.*;
 // Cấu hình CORS cho Controller này. Tốt hơn nên cấu hình toàn cục trong WebConfig.java
 // @CrossOrigin(origins = "http://localhost:5173") // Thay bằng domain frontend của bạn
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+// Cấu hình CORS cho Controller này. Tốt hơn nên cấu hình toàn cục trong WebConfig.java
+// @CrossOrigin(origins = "http://localhost:5173") // Thay bằng domain frontend của bạn
+>>>>>>> 9ac8281 (First commit)
 
 public class FeedbackController {
     private static final Logger logger = LoggerFactory.getLogger(FeedbackController.class);

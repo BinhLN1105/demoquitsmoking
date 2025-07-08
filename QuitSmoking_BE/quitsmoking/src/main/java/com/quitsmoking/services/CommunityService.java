@@ -54,6 +54,7 @@ public class CommunityService {
             String avatarUrl = (user != null) ? user.getPictureUrl() : null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
@@ -64,6 +65,8 @@ public class CommunityService {
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
 
             return new CommunityPostDto(
                     post,
@@ -71,6 +74,7 @@ public class CommunityService {
                     username,
                     firstName,
                     lastName,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -85,6 +89,9 @@ public class CommunityService {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+                    avatarUrl
+>>>>>>> 9ac8281 (First commit)
             );
         }).collect(Collectors.toList());
     }
@@ -102,6 +109,7 @@ public class CommunityService {
             String avatarUrl = (user != null) ? user.getPictureUrl() : null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             String role = (user != null && user.getRole() != null) ? user.getRole().name() : null;
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
@@ -112,6 +120,8 @@ public class CommunityService {
             String membershipPlanId = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getId() : null;
             String membershipPlanName = (user != null && user.getCurrentMembershipPlan() != null) ? user.getCurrentMembershipPlan().getPlanName() : null;
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
 
             return new CommunityPostDto(
                     post,
@@ -119,6 +129,7 @@ public class CommunityService {
                     username,
                     firstName,
                     lastName,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -133,6 +144,9 @@ public class CommunityService {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+                    avatarUrl
+>>>>>>> 9ac8281 (First commit)
             );
         });
     }
@@ -160,6 +174,7 @@ public class CommunityService {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2ab7ab5 (Deploy)
     @Transactional
@@ -172,6 +187,9 @@ public class CommunityService {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+    public void deletePost(String postId) {
+>>>>>>> 9ac8281 (First commit)
         communityPostRepository.deleteById(postId);
     }
 

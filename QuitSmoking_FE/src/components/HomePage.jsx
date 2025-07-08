@@ -195,6 +195,7 @@ const HomePage = () => {
               <a href="https://ptdat30.github.io/digital-cv-portfolio/" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               © {new Date().getFullYear()} The QuitSmoking application was developed by F4_VanTai's team
 =======
               © {new Date().getFullYear()} QuitSmoking made by Group 3
@@ -202,6 +203,9 @@ const HomePage = () => {
 =======
               © {new Date().getFullYear()} The QuitSmoking application was developed by F4_VanTai's team
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+              © {new Date().getFullYear()} QuitSmoking made by Group 3
+>>>>>>> 9ac8281 (First commit)
               </a>
             </p>
           </div>

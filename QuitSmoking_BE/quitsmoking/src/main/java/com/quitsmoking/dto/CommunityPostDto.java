@@ -20,6 +20,7 @@ public class CommunityPostDto {
     private String avatarUrl; // Assuming User model has an avatar URL
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String role; // ADMIN, COACH, MEMBER, GUEST
     private String membershipPlanId; // FREE_TRIAL_PLAN, PLAN30DAYS, PLAN60DAYS, PLAN90DAYS
     private String membershipPlanName; // Tên gói thành viên
@@ -30,11 +31,14 @@ public class CommunityPostDto {
     private String membershipPlanId; // FREE_TRIAL_PLAN, PLAN30DAYS, PLAN60DAYS, PLAN90DAYS
     private String membershipPlanName; // Tên gói thành viên
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
 
     // Constructor (quan trọng để ánh xạ từ Entity sang DTO)
     public CommunityPostDto() {}
 
     // Constructor để dễ dàng tạo DTO từ CommunityPost và User
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public CommunityPostDto(CommunityPost post, String userId, String username, String firstName, String lastName, String avatarUrl, String role, String membershipPlanId, String membershipPlanName) {
@@ -44,6 +48,9 @@ public class CommunityPostDto {
 =======
     public CommunityPostDto(CommunityPost post, String userId, String username, String firstName, String lastName, String avatarUrl, String role, String membershipPlanId, String membershipPlanName) {
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+    public CommunityPostDto(CommunityPost post, String userId, String username, String firstName, String lastName, String avatarUrl) {
+>>>>>>> 9ac8281 (First commit)
         this.id = post.getId();
         this.title = post.getTitle();
         this.content = post.getContent();
@@ -57,6 +64,7 @@ public class CommunityPostDto {
         this.avatarUrl = avatarUrl;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.role = role;
         this.membershipPlanId = membershipPlanId;
         this.membershipPlanName = membershipPlanName;
@@ -67,6 +75,8 @@ public class CommunityPostDto {
         this.membershipPlanId = membershipPlanId;
         this.membershipPlanName = membershipPlanName;
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
     }
 
     // Getters and Setters cho tất cả các trường
@@ -95,6 +105,7 @@ public class CommunityPostDto {
     public void setAvatarUrl(String avatarUrl) { this.avatarUrl = avatarUrl; }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2ab7ab5 (Deploy)
     public String getRole() { return role; }
@@ -108,4 +119,6 @@ public class CommunityPostDto {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
 }

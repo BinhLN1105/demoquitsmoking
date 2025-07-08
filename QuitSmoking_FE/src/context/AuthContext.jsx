@@ -8,16 +8,22 @@ const AuthContext = createContext();
 const authReducer = (state, action) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
   console.log(
     "AuthContext (Reducer): Hành động được gửi đi:",
     action.type,
     "Payload:",
     action.payload
   );
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
   switch (action.type) {
     case "LOGIN_START":
       return {
@@ -50,16 +56,22 @@ const authReducer = (state, action) => {
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
       console.log(
         "AuthContext (Reducer): LOGIN_SUCCESS - Trạng thái mới:",
         newState
       );
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
       return newState;
     case "LOGIN_FAILURE":
       const failureState = {
@@ -72,16 +84,22 @@ const authReducer = (state, action) => {
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
       console.log(
         "AuthContext (Reducer): LOGIN_FAILURE - Trạng thái mới:",
         failureState
       );
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
       return failureState;
     case "LOGOUT":
       const logoutState = {
@@ -93,22 +111,29 @@ const authReducer = (state, action) => {
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
       console.log(
         "AuthContext (Reducer): LOGOUT - Trạng thái mới:",
         logoutState
       );
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
       return logoutState;
     case "UPDATE_USER":
       const updatedUserState = {
         ...state,
         user: { ...state.user, ...action.payload }, // Cập nhật các trường user hiện có
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -128,6 +153,8 @@ const authReducer = (state, action) => {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
       console.log(
         "AuthContext (Reducer): UPDATE_USER - Trạng thái mới:",
         updatedUserState
@@ -153,9 +180,12 @@ const authReducer = (state, action) => {
         "AuthContext (Reducer): CLEAR_ERROR - Trạng thái mới:",
         clearedErrorState
       );
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
       return clearedErrorState;
     default:
       return state;
@@ -179,7 +209,10 @@ export const AuthProvider = ({ children }) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9ac8281 (First commit)
     console.log(
       "AuthContext: Kiểm tra đồng bộ - State isAuthenticated:",
       state.isAuthenticated
@@ -193,9 +226,12 @@ export const AuthProvider = ({ children }) => {
       user ? "Có" : "Không"
     );
 
+<<<<<<< HEAD
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+>>>>>>> 9ac8281 (First commit)
     // Nếu state nghĩ đã login nhưng không có token/user → logout
     if (state.isAuthenticated && (!token || !user)) {
       console.warn("AuthContext: Phát hiện mất đồng bộ - logout tự động");
@@ -205,6 +241,7 @@ export const AuthProvider = ({ children }) => {
     else if (!state.isAuthenticated && token && user) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.log(
         "AuthContext: Phát hiện có token/user mà chưa login - đồng bộ state"
@@ -212,6 +249,11 @@ export const AuthProvider = ({ children }) => {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+      console.log(
+        "AuthContext: Phát hiện có token/user mà chưa login - đồng bộ state"
+      );
+>>>>>>> 9ac8281 (First commit)
       dispatch({
         type: "LOGIN_SUCCESS",
         payload: { ...user, token },
@@ -280,11 +322,15 @@ export const AuthProvider = ({ children }) => {
       const response = await authService.login(credentials);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.log("AuthContext: Login response:", response);
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+      console.log("AuthContext: Login response:", response);
+>>>>>>> 9ac8281 (First commit)
 
       if (response.success) {
         const userData = response.user;
@@ -310,6 +356,7 @@ export const AuthProvider = ({ children }) => {
             'user-activity',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             (message) => {
               console.log('User activity message:', message);
@@ -317,6 +364,11 @@ export const AuthProvider = ({ children }) => {
 >>>>>>> d9771916ef21d7f9c4204541bf68445c0d61e038
 =======
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+            (message) => {
+              console.log('User activity message:', message);
+            }
+>>>>>>> 9ac8281 (First commit)
           );
         }
 

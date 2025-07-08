@@ -132,6 +132,7 @@ public class AdminController {
             User user = adminService.updateUserRole(userId, newRole);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             UserAdminResponse userDto = new UserAdminResponse(user);
             result.put("success", true);
             result.put("user", userDto);
@@ -144,6 +145,10 @@ public class AdminController {
             result.put("success", true);
             result.put("user", userDto);
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+            result.put("success", true);
+            result.put("user", user);
+>>>>>>> 9ac8281 (First commit)
         } catch (Exception e) {
             result.put("success", false);
             result.put("message", e.getMessage());

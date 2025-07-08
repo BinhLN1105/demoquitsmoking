@@ -19,6 +19,7 @@ const Comment = ({ comment, onReply, onDelete, isOwner }) => {
                             ? comment.user.pictureUrl
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             : `http://localhost:8080${comment.user.pictureUrl}`}
 =======
                             : `${import.meta.env.VITE_API_URL}${comment.user.pictureUrl}`}
@@ -26,6 +27,9 @@ const Comment = ({ comment, onReply, onDelete, isOwner }) => {
 =======
                             : `http://localhost:8080${comment.user.pictureUrl}`}
 >>>>>>> 2ab7ab5 (Deploy)
+=======
+                            : `http://localhost:8080${comment.user.pictureUrl}`}
+>>>>>>> 9ac8281 (First commit)
                         alt={comment.user.username}
                         className="w-8 h-8 rounded-full object-cover"
                     />
