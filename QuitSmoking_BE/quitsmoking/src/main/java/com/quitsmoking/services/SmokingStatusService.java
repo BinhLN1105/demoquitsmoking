@@ -76,12 +76,12 @@ public class SmokingStatusService {
     }
 
     // Lấy một bản ghi tình trạng hút thuốc theo ID
-    public Optional<SmokingStatus> getSmokingStatusById(Long id) {
+    public Optional<SmokingStatus> getSmokingStatusById(String id) {
         return smokingStatusDAO.findById(id);
     }
 
     // Cập nhật bản ghi tình trạng hút thuốc
-    public SmokingStatus updateSmokingStatus(Long statusId, SmokingStatusRequest request) {
+    public SmokingStatus updateSmokingStatus(String statusId, SmokingStatusRequest request) {
         SmokingStatus existingStatus = smokingStatusDAO.findById(statusId)
                 .orElseThrow(() -> new RuntimeException("Smoking status not found with ID: " + statusId));
 
@@ -100,7 +100,7 @@ public class SmokingStatusService {
     }
 
     // Xóa bản ghi tình trạng hút thuốc
-    public void deleteSmokingStatus(Long id) {
+    public void deleteSmokingStatus(String id) {
         smokingStatusDAO.deleteById(id);
     }
 }

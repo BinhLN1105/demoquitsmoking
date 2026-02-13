@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite' // <-- Đảm bảo bạn đã cài 
 export default defineConfig({
   plugins: [react(), tailwindcss(),],
   server: {
-    port: 4173,
+    port: 5173,
   },
   define: {
     global: 'globalThis',

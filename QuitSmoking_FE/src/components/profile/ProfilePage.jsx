@@ -197,7 +197,7 @@ const ProfilePage = () => {
                   src={
                     user.pictureUrl.startsWith("http")
                       ? user.pictureUrl
-                      : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
+                      : `${import.meta.env.VITE_API_BASE_URL}${user.pictureUrl}`
                   }
                   alt="Avatar"
                   className="h-16 w-16 rounded-full object-cover"

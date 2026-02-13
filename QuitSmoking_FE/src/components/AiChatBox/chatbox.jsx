@@ -223,7 +223,7 @@ const ChatBox = ({ isOpen, onClose }) => {
         </div>
 
         {/* Custom styles for animations */}
-        <style jsx>{`
+        <style>{`
           @keyframes slideIn {
             from {
               opacity: 0;

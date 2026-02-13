@@ -208,7 +208,7 @@ if (isAuthenticated) {
                     src={
                       user.pictureUrl.startsWith("http")
                         ? user.pictureUrl
-                        : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
+                        : `${import.meta.env.VITE_API_BASE_URL}${user.pictureUrl}`
                     }
                     alt="User Avatar"
                     className="h-8 w-8 rounded-full object-cover"
@@ -343,7 +343,7 @@ if (isAuthenticated) {
                       src={
                         user.pictureUrl.startsWith("http")
                           ? user.pictureUrl
-                          : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`
+                          : `${import.meta.env.VITE_API_BASE_URL}${user.pictureUrl}`
                       }
                       alt="User Avatar"
                       className="h-8 w-8 rounded-full object-cover"

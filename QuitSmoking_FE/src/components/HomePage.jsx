@@ -129,7 +129,7 @@ const HomePage = () => {
                     alt="Email"
                     className="w-6 h-6 mr-3 hover:scale-110 transition-transform duration-300"
                 />
-                <span>QuitSmoking@gmail.com</span>
+                <span>quitsmokingservices.help@gmail.com</span>
               </div>
             </div>
 
