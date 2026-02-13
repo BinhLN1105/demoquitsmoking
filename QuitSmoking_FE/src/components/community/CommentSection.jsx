@@ -23,7 +23,7 @@ const CommentSection = ({ postId, showTitle = true }) => {
                 }
 
                 const response = await fetch(
-                    `${import.meta.env.VITE_API_URL}/api/community/comments/post/${postId}`,
+                    `${import.meta.env.VITE_API_BASE_URL}/api/community/comments/post/${postId}`,
                     { headers }
                 );
 
@@ -50,7 +50,7 @@ const CommentSection = ({ postId, showTitle = true }) => {
                 return;
             }
 
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/comments`, {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/community/comments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const CommentSection = ({ postId, showTitle = true }) => {
                             <img
                                 src={user.pictureUrl.startsWith("http")
                                     ? user.pictureUrl
-                                    : `${import.meta.env.VITE_API_URL}${user.pictureUrl}`}
+                                    : `${import.meta.env.VITE_API_BASE_URL}${user.pictureUrl}`}
                                 alt={user.username}
                                 className="w-10 h-10 rounded-full object-cover border border-green-200"
                             />

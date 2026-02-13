@@ -18,6 +18,7 @@ import com.quitsmoking.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDateTime;
 import java.time.LocalDate;
@@ -49,6 +50,9 @@ public class MembershipService {
 
     @Autowired
     private EmailService emailService; // THÊM: Inject EmailService vào đây
+
+    @Value("${app.frontend.url}")
+    private String frontendUrl;
 
     /**
      * Lấy thông tin gói thành viên hiện tại của người dùng
@@ -192,7 +196,7 @@ public class MembershipService {
             String body = String.format(
                     "Chào %s,\n\n" +
                             "Gói thành viên của bạn đã được nâng cấp thành công lên gói '%s'.\n" +
-                            "Bạn có thể xem chi tiết gói của mình tại: http://localhost:4173/membership\n\n" + // Thay thế bằng URL thực tế
+                            "Bạn có thể xem chi tiết gói của mình tại: " + frontendUrl + "/membership\n\n" + // Thay thế bằng URL thực tế
                             "Cảm ơn bạn đã tin tưởng QuitSmoking!\n\n" +
                             "Trân trọng,\n" +
                             "Đội ngũ QuitSmoking",

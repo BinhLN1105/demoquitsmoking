@@ -16,7 +16,7 @@ const PostDetail = () => {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await fetch(`${import.meta.env.VITE_API_URL}/api/community/posts/${postId}`);
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/community/posts/${postId}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch post');
                 }
@@ -58,7 +58,7 @@ const PostDetail = () => {
                         <img
                             src={post.pictureUrl.startsWith("http")
                                 ? post.pictureUrl
-                                : `${import.meta.env.VITE_API_URL}${post.pictureUrl}`}
+                                : `${import.meta.env.VITE_API_BASE_URL}${post.pictureUrl}`}
                             alt={post.username}
                             className="w-12 h-12 rounded-full object-cover border-2 border-green-200"
                         />

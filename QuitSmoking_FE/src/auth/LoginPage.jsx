@@ -25,8 +25,6 @@ const LoginPage = () => {
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
-  const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
-
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -120,7 +118,7 @@ const LoginPage = () => {
 
   return (
       <div
-          className="min-h-screen w-full flex items-center justify-center bg-neutral-100 px-4"
+          className="min-h-screen w-full flex items-center justify-center bg-neutral-100 px-4 relative"
           style={{
             // Bạn có thể giữ background image hoặc di chuyển nó vào CSS nếu muốn
             backgroundImage: "url('images/123123123.jpg')",
@@ -128,6 +126,27 @@ const LoginPage = () => {
             backgroundPosition: "start",
           }}
       >
+        {/* Demo credentials info box */}
+        <div className="fixed top-4 right-4 z-50 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4 max-w-xs text-sm">
+          <div className="font-semibold text-gray-700 mb-2 flex items-center gap-2">
+            <span>🔑</span>
+            <span>Tài khoản Demo</span>
+          </div>
+          <div className="space-y-2">
+            <div className="bg-blue-50 rounded-lg p-2 border border-blue-100">
+              <div className="font-medium text-blue-700 text-xs mb-1">Admin</div>
+              <div className="text-gray-600 text-xs">
+                <span className="font-mono">admin</span> / <span className="font-mono">123123123</span>
+              </div>
+            </div>
+            <div className="bg-green-50 rounded-lg p-2 border border-green-100">
+              <div className="font-medium text-green-700 text-xs mb-1">Coach</div>
+              <div className="text-gray-600 text-xs">
+                <span className="font-mono">coach</span> / <span className="font-mono">123123123</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8 login-container">
           {" "}
           {/* Thêm class login-container */}
@@ -272,7 +291,6 @@ const LoginPage = () => {
               <GoogleLogin
                   onSuccess={handleGoogleSuccess}
                   onError={handleGoogleError}
-                  useOneTap
               />
             </div>
           </div>

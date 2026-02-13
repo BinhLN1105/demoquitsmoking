@@ -1,5 +1,5 @@
 const config = {
-  API_BASE_URL: import.meta.env.VITE_API_BASE_URL || `${import.meta.env.VITE_API_URL}`,
+  API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
   endpoints: {
     // Authentication
     register: "/api/auth/register",

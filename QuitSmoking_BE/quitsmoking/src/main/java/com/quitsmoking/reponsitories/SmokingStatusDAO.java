@@ -13,7 +13,7 @@ import java.util.Optional;
  * Repository thao tác với bảng smoking_status.
  */
 @Repository
-public interface SmokingStatusDAO extends JpaRepository<SmokingStatus, Long> {
+public interface SmokingStatusDAO extends JpaRepository<SmokingStatus, String> {
 
     // Tìm tất cả tình trạng hút thuốc của một user
     List<SmokingStatus> findByUser(User user);

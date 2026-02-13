@@ -1,5 +1,5 @@
 // src/services/passwordResetAPI.js
-const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/auth`;
+const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api/auth`;
 
 export const passwordResetAPI = {
     // Gửi OTP đến email

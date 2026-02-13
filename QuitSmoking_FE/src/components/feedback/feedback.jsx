@@ -26,7 +26,7 @@ const Feedback = () => {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback/my-feedback`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/feedback/my-feedback`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${jwtToken}`
@@ -110,7 +110,7 @@ const Feedback = () => {
     const jwtToken = localStorage.getItem('jwt_token');
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/feedback`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

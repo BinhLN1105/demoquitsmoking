@@ -61,7 +61,7 @@ public class SmokingStatusController {
 
     // Endpoint để lấy một tình trạng hút thuốc theo ID
     @GetMapping("/{statusId}")
-    public ResponseEntity<SmokingStatus> getSmokingStatusById(@PathVariable Long statusId) {
+    public ResponseEntity<SmokingStatus> getSmokingStatusById(@PathVariable String statusId) {
         return smokingStatusService.getSmokingStatusById(statusId)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -69,7 +69,7 @@ public class SmokingStatusController {
 
     // Endpoint để cập nhật tình trạng hút thuốc
     @PutMapping("/{statusId}")
-    public ResponseEntity<?> updateSmokingStatus(@PathVariable Long statusId,
+    public ResponseEntity<?> updateSmokingStatus(@PathVariable String statusId,
                                                  @RequestBody SmokingStatusRequest request) {
         try {
             SmokingStatus updatedStatus = smokingStatusService.updateSmokingStatus(statusId, request);
@@ -83,7 +83,7 @@ public class SmokingStatusController {
 
     // Endpoint để xóa tình trạng hút thuốc
     @DeleteMapping("/{statusId}")
-    public ResponseEntity<Void> deleteSmokingStatus(@PathVariable Long statusId) {
+    public ResponseEntity<Void> deleteSmokingStatus(@PathVariable String statusId) {
         try {
             smokingStatusService.deleteSmokingStatus(statusId);
             return ResponseEntity.noContent().build(); // Trả về 204 No Content

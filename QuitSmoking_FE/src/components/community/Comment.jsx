@@ -17,7 +17,7 @@ const Comment = ({ comment, onReply, onDelete, isOwner }) => {
                     <img
                         src={comment.user.pictureUrl.startsWith("http")
                             ? comment.user.pictureUrl
-                            : `${import.meta.env.VITE_API_URL}${comment.user.pictureUrl}`}
+                            : `${import.meta.env.VITE_API_BASE_URL}${comment.user.pictureUrl}`}
                         alt={comment.user.username}
                         className="w-8 h-8 rounded-full object-cover"
                     />

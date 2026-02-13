@@ -86,7 +86,7 @@ const AiChatWidget = () => {
               </div>
 
               {/* CSS cho hiệu ứng chớp mắt */}
-              <style jsx>{`
+              <style>{`
             @keyframes robotBlink {
               0%, 85%, 100% { opacity: 1; }
               90%, 95% { opacity: 0.3; }
