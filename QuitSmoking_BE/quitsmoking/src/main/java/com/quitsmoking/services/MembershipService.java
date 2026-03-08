@@ -271,7 +271,7 @@ public class MembershipService {
                     "Chào %s,\n\n" +
                             "Gói thành viên '%s' của bạn đã được kích hoạt thành công!\n" +
                             "Chi tiết giao dịch: ID %s, Số tiền: %s %s.\n\n" +
-                            "Bạn có thể truy cập các tính năng cao cấp ngay bây giờ tại: http://localhost:4173/profile\n\n" + // Thay thế bằng URL thực tế
+                            "Bạn có thể truy cập các tính năng cao cấp ngay bây giờ tại: " + frontendUrl + "/profile\n\n" + // Thay thế bằng URL thực tế
                             "Cảm ơn bạn đã tin tưởng QuitSmoking!\n\n" +
                             "Trân trọng,\n" +
                             "Đội ngũ QuitSmoking",
