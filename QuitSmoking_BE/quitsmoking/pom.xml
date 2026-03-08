@@ -36,8 +36,7 @@
         <hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
         <!-- Định nghĩa phiên bản JJWT (gộp thành 0.12.5 để tránh xung đột) -->
         <jjwt.version>0.12.5</jjwt.version>
-        <!-- Định nghĩa phiên bản MySQL Connector -->
-        <mysql.version>8.3.0</mysql.version>
+        <!-- Định nghĩa phiên bản PostgreSQL Connector -->
         <lombok.version>1.18.30</lombok.version>
     </properties>
     <dependencies>
@@ -152,9 +151,9 @@
 
         <!-- Database -->
         <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>${mysql.version}</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- Lombok -->
